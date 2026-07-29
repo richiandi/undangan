@@ -305,17 +305,35 @@
         let isPlaying = false;
 
         // Buka Undangan & Transisi Slide Push
+        <!-- SCRIPT JAVASCRIPT -->
+    <script>
+        // Ambil nama tamu dari URL (?to=Nama+Tamu)
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestName = urlParams.get('to');
+        if (guestName) {
+            document.getElementById('guest-name').innerText = decodeURIComponent(guestName);
+        }
+
+        const bgMusic = document.getElementById('bg-music');
+        let isPlaying = false;
+
+        // ===== GANTI BAGIAN INI =====
         function openInvitation() {
             const cover = document.getElementById('cover-section');
             const main = document.getElementById('main-invitation');
 
-            cover.style.transform = 'translateY(-100vh)';
+            // Sembunyikan cover secara total agar tidak ada blank hitam
+            cover.style.display = 'none';
+
+            // Tampilkan halaman utama
             main.classList.remove('hidden');
             main.style.display = 'flex';
             main.style.transform = 'translateY(0)';
             
-            window.scrollTo(0, 0);
+            // Paksa posisi window kembali ke paling atas
+            window.scrollTo({ top: 0, behavior: 'instant' });
 
+            // Putar Musik
             bgMusic.play().then(() => {
                 isPlaying = true;
                 document.getElementById('music-icon').classList.add('fa-spin');
@@ -323,10 +341,12 @@
                 console.log("Autoplay dicegah browser:", error);
             });
 
+            // Jalankan animasi fade-in teks
             setTimeout(() => {
                 triggerFadeIn();
-            }, 300);
+            }, 100);
         }
+        // ============================
 
         // Toggle Music Play/Pause
         function toggleMusic() {
@@ -414,6 +434,7 @@
             document.getElementById('comment-name').value = '';
             document.getElementById('comment-text').value = '';
         }
+    </script>
     </script>
 </body>
 </html>
