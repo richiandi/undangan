@@ -98,11 +98,10 @@
         <div class="max-w-2xl mx-auto w-full space-y-16 py-12">
 
             <!-- Mukaddimah & Ayat Suci -->
-            <div class="text-center space-y-5 fade-in">
+            <div id="section-home" class="text-center space-y-5 fade-in">
                 <p class="text-xs tracking-[0.3em] uppercase text-amber-300 font-semibold font-serif-luxury">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
                 <h2 class="font-script text-4xl md:text-6xl text-amber-100">Menuju Ikatan Suci</h2>
                 <div class="bg-white/5 backdrop-blur-md p-6 md:p-9 rounded-3xl border border-amber-300/20 shadow-2xl space-y-4 relative">
-                    <!-- Ornamen Sudut -->
                     <div class="absolute top-2 left-2 text-amber-300/40 text-xs">✦</div>
                     <div class="absolute top-2 right-2 text-amber-300/40 text-xs">✦</div>
                     <p class="text-xs md:text-sm text-gray-300 italic leading-relaxed">
@@ -112,19 +111,19 @@
                 </div>
             </div>
 
-            <!-- Salam Pembuka & Mempelai -->
+            <!-- Salam Pembuka & Mempelai (Tanpa Background Shape Kotak) -->
             <div class="space-y-8 text-center fade-in">
                 <p class="text-xs md:text-sm leading-relaxed text-gray-300 max-w-lg mx-auto">
                     Assalamu'alaikum Warahmatullahi Wabarakatuh.<br>
                     Dengan memohon rahmat dan ridha Allah Subhanahu Wa Ta'ala, kami bermaksud menyelenggarakan pernikahan buah hati tercinta kami:
                 </p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
                     <!-- Mempelai Pria -->
-                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-amber-300/20 shadow-2xl transition hover:border-amber-400/50">
-                        <h3 class="font-script text-4xl md:text-5xl text-amber-200 mb-3">Romeo Montague, S.T.</h3>
+                    <div class="p-4 space-y-2">
+                        <h3 class="font-script text-5xl md:text-6xl text-amber-200 mb-2">Romeo Montague, S.T.</h3>
                         <p class="text-xs text-amber-300 font-semibold uppercase tracking-wider font-serif-luxury">Putra Tercinta dari</p>
-                        <p class="text-xs text-gray-300 mt-1">Bapak H. Montague & Ibu Hj. Montague</p>
+                        <p class="text-xs text-gray-300">Bapak H. Montague & Ibu Hj. Montague</p>
                     </div>
 
                     <div class="flex items-center justify-center my-[-10px] md:my-0">
@@ -132,10 +131,10 @@
                     </div>
 
                     <!-- Mempelai Wanita -->
-                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-amber-300/20 shadow-2xl transition hover:border-amber-400/50 md:col-start-2">
-                        <h3 class="font-script text-4xl md:text-5xl text-amber-200 mb-3">Juliet Capulet, S.Pd.</h3>
+                    <div class="p-4 space-y-2 md:col-start-2">
+                        <h3 class="font-script text-5xl md:text-6xl text-amber-200 mb-2">Juliet Capulet, S.Pd.</h3>
                         <p class="text-xs text-amber-300 font-semibold uppercase tracking-wider font-serif-luxury">Putri Tercinta dari</p>
-                        <p class="text-xs text-gray-300 mt-1">Bapak H. Capulet & Ibu Hj. Capulet</p>
+                        <p class="text-xs text-gray-300">Bapak H. Capulet & Ibu Hj. Capulet</p>
                     </div>
                 </div>
             </div>
@@ -320,28 +319,28 @@
         </div>
     </section>
 
-    <!-- ================= 3. FLOATING NAVIGATION BAR (MENU BAWAH) ================= -->
-    <div id="floating-nav" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-40 hidden bg-black/70 backdrop-blur-lg px-6 py-3 rounded-full border border-amber-300/30 shadow-2xl items-center gap-6">
-        <a href="#main-invitation" class="text-amber-200 hover:text-white text-xs flex flex-col items-center gap-1 transition">
+    <!-- ================= 3. FLOATING NAVIGATION BAR (TANPA BACKGROUND KOTAK) ================= -->
+    <div id="floating-nav" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-40 hidden px-6 py-2.5 items-center gap-7">
+        <button onclick="smoothJump('section-home')" class="text-amber-200/80 hover:text-amber-300 text-xs flex flex-col items-center gap-1 transition transform hover:scale-110">
             <i class="fa-solid fa-house text-sm"></i>
-            <span class="text-[9px]">Home</span>
-        </a>
-        <a href="#section-acara" class="text-amber-200 hover:text-white text-xs flex flex-col items-center gap-1 transition">
+            <span class="text-[9px] tracking-wide">Home</span>
+        </button>
+        <button onclick="smoothJump('section-acara')" class="text-amber-200/80 hover:text-amber-300 text-xs flex flex-col items-center gap-1 transition transform hover:scale-110">
             <i class="fa-solid fa-calendar-days text-sm"></i>
-            <span class="text-[9px]">Acara</span>
-        </a>
-        <a href="#section-cerita" class="text-amber-200 hover:text-white text-xs flex flex-col items-center gap-1 transition">
+            <span class="text-[9px] tracking-wide">Acara</span>
+        </button>
+        <button onclick="smoothJump('section-cerita')" class="text-amber-200/80 hover:text-amber-300 text-xs flex flex-col items-center gap-1 transition transform hover:scale-110">
             <i class="fa-solid fa-heart text-sm"></i>
-            <span class="text-[9px]">Cerita</span>
-        </a>
-        <a href="#section-rsvp" class="text-amber-200 hover:text-white text-xs flex flex-col items-center gap-1 transition">
+            <span class="text-[9px] tracking-wide">Cerita</span>
+        </button>
+        <button onclick="smoothJump('section-rsvp')" class="text-amber-200/80 hover:text-amber-300 text-xs flex flex-col items-center gap-1 transition transform hover:scale-110">
             <i class="fa-solid fa-envelope-circle-check text-sm"></i>
-            <span class="text-[9px]">RSVP</span>
-        </a>
-        <a href="#section-amplop" class="text-amber-200 hover:text-white text-xs flex flex-col items-center gap-1 transition">
+            <span class="text-[9px] tracking-wide">RSVP</span>
+        </button>
+        <button onclick="smoothJump('section-amplop')" class="text-amber-200/80 hover:text-amber-300 text-xs flex flex-col items-center gap-1 transition transform hover:scale-110">
             <i class="fa-solid fa-gift text-sm"></i>
-            <span class="text-[9px]">Gift</span>
-        </a>
+            <span class="text-[9px] tracking-wide">Gift</span>
+        </button>
     </div>
 
     <!-- SCRIPT JAVASCRIPT -->
@@ -381,6 +380,14 @@
             setTimeout(() => {
                 triggerFadeIn();
             }, 100);
+        }
+
+        // Fungsi Smooth Jump-To untuk Navigasi Melayang
+        function smoothJump(sectionId) {
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
 
         // Toggle Music Play/Pause
