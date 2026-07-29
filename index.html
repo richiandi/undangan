@@ -304,25 +304,12 @@
         const bgMusic = document.getElementById('bg-music');
         let isPlaying = false;
 
-        // Buka Undangan & Transisi Slide Push
-        <!-- SCRIPT JAVASCRIPT -->
-    <script>
-        // Ambil nama tamu dari URL (?to=Nama+Tamu)
-        const urlParams = new URLSearchParams(window.location.search);
-        const guestName = urlParams.get('to');
-        if (guestName) {
-            document.getElementById('guest-name').innerText = decodeURIComponent(guestName);
-        }
-
-        const bgMusic = document.getElementById('bg-music');
-        let isPlaying = false;
-
-        // ===== GANTI BAGIAN INI =====
+        // Buka Undangan & Transisi Tanpa Blank Hitam
         function openInvitation() {
             const cover = document.getElementById('cover-section');
             const main = document.getElementById('main-invitation');
 
-            // Sembunyikan cover secara total agar tidak ada blank hitam
+            // Sembunyikan cover secara total
             cover.style.display = 'none';
 
             // Tampilkan halaman utama
@@ -330,7 +317,7 @@
             main.style.display = 'flex';
             main.style.transform = 'translateY(0)';
             
-            // Paksa posisi window kembali ke paling atas
+            // Paksa posisi window kembali ke paling atas secara instan
             window.scrollTo({ top: 0, behavior: 'instant' });
 
             // Putar Musik
@@ -346,7 +333,6 @@
                 triggerFadeIn();
             }, 100);
         }
-        // ============================
 
         // Toggle Music Play/Pause
         function toggleMusic() {
@@ -434,7 +420,6 @@
             document.getElementById('comment-name').value = '';
             document.getElementById('comment-text').value = '';
         }
-    </script>
     </script>
 </body>
 </html>
