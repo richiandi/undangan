@@ -26,6 +26,11 @@
             transform: translateY(0);
         }
 
+        /* Transisi Smooth untuk Cover */
+        #cover-section {
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+
         /* Animasi Gelombang Musik */
         .sound-wave span {
             display: inline-block;
@@ -65,7 +70,7 @@
     </audio>
 
     <!-- ================= 1. COVER DEPAN ================= -->
-    <section id="cover-section" class="relative z-20 h-screen w-screen flex flex-col justify-between items-center text-center p-6 transition-transform duration-700 ease-in-out">
+    <section id="cover-section" class="relative z-20 h-screen w-screen flex flex-col justify-between items-center text-center p-6">
         <div class="my-auto space-y-4 fade-in appear">
             <p class="text-xs md:text-sm tracking-[0.35em] uppercase text-amber-300 font-medium font-serif-luxury">The Wedding Of</p>
             <h1 class="font-script text-6xl md:text-8xl text-amber-100 drop-shadow-lg">Richi & Vega</h1>
@@ -85,7 +90,7 @@
     </section>
 
     <!-- ================= 2. HALAMAN UTAMA / KONTEN PREMIUM ================= -->
-    <section id="main-invitation" class="relative z-10 min-h-screen w-screen hidden flex-col justify-between text-white p-4 md:p-12 pb-24 transition-transform duration-700 ease-in-out">
+    <section id="main-invitation" class="relative z-10 min-h-screen w-screen hidden flex-col justify-between text-white p-4 md:p-12 pb-24">
         
         <!-- Tombol Musik & Sound Wave Melayang -->
         <button id="music-toggle" onclick="toggleMusic()" class="fixed top-6 right-6 z-50 bg-white/10 backdrop-blur-md px-4 py-2.5 rounded-full text-white border border-amber-300/30 hover:bg-white/20 transition shadow-2xl flex items-center gap-2">
@@ -121,9 +126,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
                     <!-- Mempelai Pria -->
                     <div class="p-4 space-y-2">
-                        <h3 class="font-script text-5xl md:text-6xl text-amber-200 mb-2">Richi Muammar A.</h3>
+                        <h3 class="font-script text-5xl md:text-6xl text-amber-200 mb-2">Romeo Montague, S.T.</h3>
                         <p class="text-xs text-amber-300 font-semibold uppercase tracking-wider font-serif-luxury">Putra Tercinta dari</p>
-                        <p class="text-xs text-gray-300">Bapak Kastoer & Ibu E. Umiyatun</p>
+                        <p class="text-xs text-gray-300">Bapak H. Montague & Ibu Hj. Montague</p>
                     </div>
 
                     <div class="flex items-center justify-center my-[-10px] md:my-0">
@@ -132,9 +137,9 @@
 
                     <!-- Mempelai Wanita -->
                     <div class="p-4 space-y-2 md:col-start-2">
-                        <h3 class="font-script text-5xl md:text-6xl text-amber-200 mb-2">Bellatrix Vega A.</h3>
+                        <h3 class="font-script text-5xl md:text-6xl text-amber-200 mb-2">Juliet Capulet, S.Pd.</h3>
                         <p class="text-xs text-amber-300 font-semibold uppercase tracking-wider font-serif-luxury">Putri Tercinta dari</p>
-                        <p class="text-xs text-gray-300">Bapak Ubed S. & Ibu Prapti W.</p>
+                        <p class="text-xs text-gray-300">Bapak H. Capulet & Ibu Hj. Capulet</p>
                     </div>
                 </div>
             </div>
@@ -162,7 +167,7 @@
                         </div>
                     </div>
                     <div class="pt-2">
-                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Richi+%26+Vega&dates=20260918T010000Z/20261225T070000Z&details=Kehadiran+Anda+adalah+kehormatan+bagi+kami." target="_blank" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-amber-200 text-xs px-6 py-2.5 rounded-full transition border border-amber-300/30">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Romeo+%26+Juliet&dates=20261225T010000Z/20261225T070000Z&details=Kehadiran+Anda+adalah+kehormatan+bagi+kami." target="_blank" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-amber-200 text-xs px-6 py-2.5 rounded-full transition border border-amber-300/30">
                             <i class="fa-regular fa-calendar-check"></i> Simpan ke Google Calendar
                         </a>
                     </div>
@@ -183,9 +188,9 @@
                             <i class="fa-solid fa-ring text-lg"></i>
                         </div>
                         <h4 class="text-lg font-bold text-amber-200 font-serif-luxury tracking-wide">Akad Nikah</h4>
-                        <p class="text-xs text-gray-300"><i class="fa-regular fa-calendar-days text-amber-300 mr-2"></i> Jum'at, 18 September 2026</p>
-                        <p class="text-xs text-gray-300"><i class="fa-regular fa-clock text-amber-300 mr-2"></i> Pukul 07.00 WIB</p>
-                        <p class="text-xs text-gray-300 leading-relaxed"><i class="fa-solid fa-location-dot text-amber-300 mr-2"></i> Masjid Jami' Almuharor </p>
+                        <p class="text-xs text-gray-300"><i class="fa-regular fa-calendar-days text-amber-300 mr-2"></i> Jum'At, 18 September 2026</p>
+                        <p class="text-xs text-gray-300"><i class="fa-regular fa-clock text-amber-300 mr-2"></i> Pukul 08.00 WIB</p>
+                        <p class="text-xs text-gray-300 leading-relaxed"><i class="fa-solid fa-location-dot text-amber-300 mr-2"></i> Masjid Jami' Almuharor</p>
                     </div>
 
                     <!-- Resepsi -->
@@ -194,14 +199,14 @@
                             <i class="fa-solid fa-champagne-glasses text-lg"></i>
                         </div>
                         <h4 class="text-lg font-bold text-amber-200 font-serif-luxury tracking-wide">Resepsi Pernikahan</h4>
-                        <p class="text-xs text-gray-300"><i class="fa-regular fa-calendar-days text-amber-300 mr-2"></i> Jumat, 18 September 2026</p>
-                        <p class="text-xs text-gray-300"><i class="fa-regular fa-clock text-amber-300 mr-2"></i> Pukul 09.00 - 13.00 WIB</p>
-                        <p class="text-xs text-gray-300 leading-relaxed"><i class="fa-solid fa-location-dot text-amber-300 mr-2"></i> Kediaman Ibu Prapti W. Desa Prambontergayang, Kec. Soko, Kab. Tuban (Selatan SDN 2 Prambontergayang)</p>
+                        <p class="text-xs text-gray-300"><i class="fa-regular fa-calendar-days text-amber-300 mr-2"></i> Jum'at, 18 September 2026</p>
+                        <p class="text-xs text-gray-300"><i class="fa-regular fa-clock text-amber-300 mr-2"></i> Pukul 09.00.00 - 13.00 WIB</p>
+                        <p class="text-xs text-gray-300 leading-relaxed"><i class="fa-solid fa-location-dot text-amber-300 mr-2"></i> Kediaman Ibu Prapti W. (Selatan SDN 2 Prambontergayang)</p>
                     </div>
                 </div>
 
                 <div class="text-center pt-2">
-                    <a href="https://maps.app.goo.gl/k83hz6biGVvsU5e37" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-700 text-white text-xs px-8 py-3.5 rounded-full transition font-medium shadow-xl border border-amber-200/30">
+                    <a href="https://maps.google.com" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-700 text-white text-xs px-8 py-3.5 rounded-full transition font-medium shadow-xl border border-amber-200/30">
                         <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps Lokasi Acara
                     </a>
                 </div>
@@ -304,7 +309,7 @@
                             <span class="text-xs font-semibold text-amber-200">Budi Santoso</span>
                             <span class="text-[10px] text-gray-400">Baru saja</span>
                         </div>
-                        <p class="text-xs text-gray-300">Barakallahufulakum! Selamat berbahagia Romeo & Juliet, semoga menjadi keluarga sakinah, mawaddah, warahmah.</p>
+                        <p class="text-xs text-gray-300">Barakallahufulakum! Selamat berbahagia Richi & Vega, semoga menjadi keluarga sakinah, mawaddah, warahmah.</p>
                     </div>
                 </div>
             </div>
@@ -313,7 +318,7 @@
             <div class="text-center py-8 text-xs text-gray-400 space-y-2 fade-in">
                 <p class="leading-relaxed">Suatu kehormatan dan kebahagiaan besar bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.</p>
                 <p class="pt-4 font-semibold text-amber-300 font-serif-luxury">Wassalamu'alaikum Warahmatullahi Wabarakatuh.</p>
-                <p class="text-sm font-script text-amber-100 pt-2 text-2xl">Romeo & Juliet</p>
+                <p class="text-sm font-script text-amber-100 pt-2 text-2xl">Richi & Vega</p>
             </div>
 
         </div>
@@ -355,31 +360,36 @@
         const bgMusic = document.getElementById('bg-music');
         let isPlaying = false;
 
-        // Buka Undangan & Transisi Tanpa Blank Hitam
+        // Buka Undangan dengan Efek Transisi Fade-Out Smooth
         function openInvitation() {
             const cover = document.getElementById('cover-section');
             const main = document.getElementById('main-invitation');
             const nav = document.getElementById('floating-nav');
 
-            cover.style.display = 'none';
-            main.classList.remove('hidden');
-            main.style.display = 'flex';
-            main.style.transform = 'translateY(0)';
-            nav.style.display = 'flex';
-            
-            window.scrollTo({ top: 0, behavior: 'instant' });
-
-            bgMusic.play().then(() => {
-                isPlaying = true;
-                document.getElementById('sound-wave').style.display = 'inline-block';
-                document.getElementById('music-text').innerText = 'Music On';
-            }).catch(error => {
-                console.log("Autoplay dicegah browser:", error);
-            });
+            // Berikan efek transisi halus pada cover sebelum disembunyikan
+            cover.style.opacity = '0';
+            cover.style.transform = 'translateY(-30px)';
 
             setTimeout(() => {
-                triggerFadeIn();
-            }, 100);
+                cover.style.display = 'none';
+                main.classList.remove('hidden');
+                main.style.display = 'flex';
+                nav.style.display = 'flex';
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    document.getElementById('sound-wave').style.display = 'inline-block';
+                    document.getElementById('music-text').innerText = 'Music On';
+                }).catch(error => {
+                    console.log("Autoplay dicegah browser:", error);
+                });
+
+                setTimeout(() => {
+                    triggerFadeIn();
+                }, 100);
+            }, 700); // Waktu jeda disesuaikan dengan durasi CSS transition cover
         }
 
         // Fungsi Smooth Jump-To untuk Navigasi Melayang
