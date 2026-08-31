@@ -369,10 +369,10 @@ meyadari bahwa hati kami telah saling memilih, 9 bulan setelah pertemuan kami me
                 return;
             }
 
-            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("days").innerText = Math.ceil(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.ceil((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.ceil((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerText = Math.ceil((distance % (1000 * 60)) / 1000);
         }, 1000);
 
         // Fitur Salin Rekening
